@@ -17,7 +17,7 @@ void usb_cdc_send_to_host(void *context, uint8_t *data, size_t size)
 {
     ESP_LOGD(TAG, "data %p, size %d", data, size);
 
-    if (tud_cdc_n_connected((int)context))
+    //if (tud_cdc_n_connected((int)context))
     {
         tinyusb_cdcacm_write_queue((tinyusb_cdcacm_itf_t)context, data, size);
         tinyusb_cdcacm_write_flush((tinyusb_cdcacm_itf_t)context, 1);

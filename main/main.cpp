@@ -132,13 +132,17 @@ static void connect_handler(void *arg, esp_event_base_t event_base, int32_t even
 extern "C" void app_main(void)
 {
     bool ret = false;
+    bool is_connected_ap=false;
 
     ESP_ERROR_CHECK(nvs_flash_init());
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
     ESP_ERROR_CHECK(esp_event_handler_register(IP_EVENT, IP_EVENT_STA_GOT_IP, connect_handler, &http_server));
     ESP_ERROR_CHECK(esp_event_handler_register(WIFI_EVENT, WIFI_EVENT_STA_DISCONNECTED, disconnect_handler, &http_server));
-    ESP_ERROR_CHECK(example_connect());
+    if(example_connect()==ESP_OK)
+    {
+        is_connected_ap=true;
+    }
 
     tinyusb_config_t tusb_cfg = {
         .device_descriptor = NULL,
@@ -179,9 +183,9 @@ extern "C" void app_main(void)
 
     // Specify the usbip server task
 #if (USE_TCP_NETCONN == 1)
-    xTaskCreate(tcp_netconn_task, "tcp_server", 4096, NULL, 14, NULL);
+    if(is_connected_ap)xTaskCreate(tcp_netconn_task, "tcp_server", 4096, NULL, 14, NULL);
 #else // BSD style
-    xTaskCreate(tcp_server_task, "tcp_server", 4096, NULL, 14, NULL);
+    if(is_connected_ap)xTaskCreate(tcp_server_task, "tcp_server", 4096, NULL, 14, NULL);
 #endif
 
     // DAP handle task

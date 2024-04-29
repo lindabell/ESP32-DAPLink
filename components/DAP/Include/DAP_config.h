@@ -397,6 +397,7 @@ __STATIC_FORCEINLINE uint32_t PIN_nRESET_IN(void)
            - 0: issue a device hardware reset.
            - 1: release device hardware reset.
 */
+#include "swd_host.h"
 __STATIC_FORCEINLINE void     PIN_nRESET_OUT(uint32_t bit)
 {
 	if (bit)
@@ -406,6 +407,13 @@ __STATIC_FORCEINLINE void     PIN_nRESET_OUT(uint32_t bit)
 	else
 	{
 		WRITE_PERI_REG(GPIO_OUT_W1TC_REG, (0x1 << PIN_nRESET));
+	}
+	if(bit)
+	{
+		// a soft reset
+		// 0x05FA0000 = VECTKEY, 0x4 = SYSRESETREQ
+		uint32_t swd_mem_write_data = 0x05FA0000 | 0x4;
+		swd_write_memory(0xE000ED0C, (uint8_t *) &swd_mem_write_data, 4);
 	}
 }
 

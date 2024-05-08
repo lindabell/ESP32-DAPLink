@@ -3,6 +3,3 @@ build/
 sdkconfig.old
 *.bin
 *.hex
-DAP/*
-managed_components/*
-dependencies.lock

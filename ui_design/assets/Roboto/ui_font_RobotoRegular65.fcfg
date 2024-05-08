@@ -1,0 +1,16 @@
+{
+  "codename": "RobotoRegular65",
+  "ttf_path": "\\assets\\Roboto\\Roboto-Regular.ttf",
+  "bin_path": "\\assets\\Roboto\\ui_font_RobotoRegular65.bin",
+  "c_path": "\\assets\\Roboto\\ui_font_RobotoRegular65.c",
+  "cfg_path": "\\assets\\Roboto\\ui_font_RobotoRegular65.fcfg",
+  "size": 65,
+  "bpp": 4,
+  "letters": 0,
+  "ranges": [
+    "0x20-0x7f"
+  ],
+  "symbols": "",
+  "customparams": "--no-compress --no-prefilter",
+  "uploaded": false
+}

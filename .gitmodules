@@ -1,0 +1,3 @@
+[submodule "main/key/rts_key"]
+	path = main/key/rts_key
+	url = git@gitee.com:RTSystem/rts_key.git

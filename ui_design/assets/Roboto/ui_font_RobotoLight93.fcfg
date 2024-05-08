@@ -1,0 +1,16 @@
+{
+  "codename": "RobotoLight93",
+  "ttf_path": "\\assets\\Roboto\\Roboto-Light.ttf",
+  "bin_path": "\\assets\\Roboto\\ui_font_RobotoLight93.bin",
+  "c_path": "\\assets\\Roboto\\ui_font_RobotoLight93.c",
+  "cfg_path": "\\assets\\Roboto\\ui_font_RobotoLight93.fcfg",
+  "size": 93,
+  "bpp": 4,
+  "letters": 0,
+  "ranges": [
+    "0x20-0x7f"
+  ],
+  "symbols": "",
+  "customparams": "--no-compress --no-prefilter",
+  "uploaded": false
+}

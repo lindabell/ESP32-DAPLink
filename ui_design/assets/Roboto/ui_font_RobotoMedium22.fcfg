@@ -1,0 +1,16 @@
+{
+  "codename": "RobotoMedium22",
+  "ttf_path": "\\assets\\Roboto\\Roboto-Medium.ttf",
+  "bin_path": "\\assets\\Roboto\\ui_font_RobotoMedium22.bin",
+  "c_path": "\\assets\\Roboto\\ui_font_RobotoMedium22.c",
+  "cfg_path": "\\assets\\Roboto\\ui_font_RobotoMedium22.fcfg",
+  "size": 22,
+  "bpp": 4,
+  "letters": 0,
+  "ranges": [
+    "0x20-0x7f"
+  ],
+  "symbols": "",
+  "customparams": "--no-compress --no-prefilter",
+  "uploaded": false
+}

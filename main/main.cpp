@@ -34,6 +34,8 @@
 #include "programmer.h"
 #include "protocol_examples_common.h"
 
+#include "user_lvgl_port.h"
+
 static const char *TAG = "main";
 static httpd_handle_t http_server = NULL;
 TaskHandle_t kDAPTaskHandle = NULL;
@@ -134,6 +136,8 @@ extern "C" void app_main(void)
     bool ret = false;
     bool is_connected_ap=false;
 
+    user_lvgl_port_init();
+
     ESP_ERROR_CHECK(nvs_flash_init());
     ESP_ERROR_CHECK(esp_netif_init());
     ESP_ERROR_CHECK(esp_event_loop_create_default());
@@ -167,6 +171,7 @@ extern "C" void app_main(void)
     ESP_LOGI(TAG, "USB initialization");
 
     ret = msc_dick_mount(CONFIG_TINYUSB_MSC_MOUNT_PATH);
+    
     tusb_cfg.configuration_descriptor = get_configuration_descriptor(ret);
     tusb_cfg.string_descriptor = get_string_descriptor(ret);
     tusb_cfg.string_descriptor_count = get_string_descriptor_count();

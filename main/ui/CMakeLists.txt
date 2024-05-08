@@ -4,6 +4,7 @@ SET(SOURCES screens/ui_logo_screen.c
     screens/ui_offlink_setting_screen.c
     screens/ui_offlink_download_screen.c
     screens/ui_usb_uart_screen.c
+    screens/ui_daplink_screen.c
     ui.c
     components/ui_comp_hook.c
     ui_helpers.c

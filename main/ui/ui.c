@@ -58,6 +58,22 @@ lv_obj_t * ui_gnd1;
 lv_obj_t * ui_vcc;
 lv_obj_t * ui_nc2;
 lv_obj_t * ui_nc3;
+
+
+// SCREEN: ui_daplink_screen
+void ui_daplink_screen_screen_init(void);
+lv_obj_t * ui_daplink_screen;
+lv_obj_t * ui_container1;
+lv_obj_t * ui_rxd1;
+lv_obj_t * ui_gnd2;
+lv_obj_t * ui_txd1;
+lv_obj_t * ui_rts1;
+lv_obj_t * ui_dtr1;
+lv_obj_t * ui_nc4;
+lv_obj_t * ui_gnd3;
+lv_obj_t * ui_vcc1;
+lv_obj_t * ui_nc5;
+lv_obj_t * ui_nc6;
 lv_obj_t * ui____initial_actions0;
 
 ///////////////////// TEST LVGL SETTINGS ////////////////////
@@ -86,6 +102,7 @@ void ui_init(void)
     ui_offlink_setting_screen_screen_init();
     ui_offlink_download_screen_screen_init();
     ui_usb_uart_screen_screen_init();
+    ui_daplink_screen_screen_init();
     ui____initial_actions0 = lv_obj_create(NULL);
     lv_disp_load_scr(ui_logo_screen);
 }

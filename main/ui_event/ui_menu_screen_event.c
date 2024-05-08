@@ -5,6 +5,7 @@
 #include "ui_about_screen_event.h"
 #include "ui_logo_screen_event.h"
 #include "ui_usb_uart_screen_event.h"
+#include "ui_daplink_screen_event.h"
 
 static void lv_ui_time_update(lv_timer_t *tmr)
 {
@@ -63,6 +64,10 @@ void menu_screen_event(lv_event_t *e)
             else if (strcmp(strBuf, "USB To Uart") == 0)
             {
                 ui_custom_load_screen(&ui_usb_uart_screen, ui_usb_uart_screen_screen_init, usb_uart_screen_event, &ui_menu_screen);
+            }
+             else if (strcmp(strBuf, "DAP Link") == 0)
+            {
+                ui_custom_load_screen(&ui_daplink_screen, ui_daplink_screen_screen_init, daplink_screen_event, &ui_menu_screen);
             }
             else
             {

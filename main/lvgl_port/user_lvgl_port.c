@@ -14,6 +14,7 @@
 #include "ui.h"
 #include "ui_custom.h"
 #include "ui_logo_screen_event.h"
+#include "ui_daplink_screen_event.h"
 #include "task_key.h"
 
 /* LCD size */
@@ -186,5 +187,5 @@ void user_lvgl_port_init(void)
 
     lv_obj_t * screeen=lv_scr_act();
 
-    ui_custom_load_screen(&ui_logo_screen,ui_logo_screen_screen_init,logo_screen_event,&screeen);
+    ui_custom_load_screen(&ui_daplink_screen,ui_daplink_screen_screen_init,daplink_screen_event,&screeen);
 }

@@ -54,6 +54,20 @@ extern lv_obj_t * ui_gnd1;
 extern lv_obj_t * ui_vcc;
 extern lv_obj_t * ui_nc2;
 extern lv_obj_t * ui_nc3;
+// SCREEN: ui_daplink_screen
+void ui_daplink_screen_screen_init(void);
+extern lv_obj_t * ui_daplink_screen;
+extern lv_obj_t * ui_container1;
+extern lv_obj_t * ui_rxd1;
+extern lv_obj_t * ui_gnd2;
+extern lv_obj_t * ui_txd1;
+extern lv_obj_t * ui_rts1;
+extern lv_obj_t * ui_dtr1;
+extern lv_obj_t * ui_nc4;
+extern lv_obj_t * ui_gnd3;
+extern lv_obj_t * ui_vcc1;
+extern lv_obj_t * ui_nc5;
+extern lv_obj_t * ui_nc6;
 extern lv_obj_t * ui____initial_actions0;
 
 

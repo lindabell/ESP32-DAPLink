@@ -3,3 +3,5 @@ build/
 sdkconfig.old
 *.bin
 *.hex
+managed_components/*
+dependencies.lock

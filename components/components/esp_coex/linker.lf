@@ -1,5 +1,0 @@
-[mapping:coexist]
-archive: libcoexist.a
-entries:
-    if ESP_WIFI_SLP_IRAM_OPT = y:
-        * (wifi_slp_iram)

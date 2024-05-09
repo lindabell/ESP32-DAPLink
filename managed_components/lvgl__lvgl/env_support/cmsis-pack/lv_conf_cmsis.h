@@ -1,6 +1,6 @@
 /**
  * @file lv_conf.h
- * Configuration file for v8.4.0
+ * Configuration file for v8.3.11
  */
 
 /* clang-format off */
@@ -10,10 +10,7 @@
 #define LV_CONF_H
 
 #include <stdint.h>
-
-#if defined(_RTE_)
-    #include "RTE_Components.h"
-#endif
+#include "RTE_Components.h"
 
 /*====================
    COLOR SETTINGS

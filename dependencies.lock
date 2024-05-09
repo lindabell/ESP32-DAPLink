@@ -5,29 +5,29 @@ dependencies:
       service_url: https://api.components.espressif.com/
       type: service
     version: 2.0.0
+  espressif/esp_tinyusb:
+    component_hash: 68acc21eb256091ce949605bd6f5ec0ec90a7d05536c06b104de520ee7e2e146
+    source:
+      service_url: https://api.components.espressif.com/
+      type: service
+    version: 1.4.0
   espressif/tinyusb:
     component_hash: 68e971ee08d20180b1a092e5ee727877a3b3d8c815fde0a91fc6fdff06d41ead
     source:
       service_url: https://api.components.espressif.com/
       type: service
     version: 0.14.3
-  espressif__esp_tinyusb:
-    component_hash: null
-    source:
-      path: E:\2.fixman\ESP32-DAPLink\components\espressif__esp_tinyusb
-      type: local
-    version: 1.4.0
   idf:
     component_hash: null
     source:
       type: idf
     version: 5.1.2
   lvgl/lvgl:
-    component_hash: d7c1ac037ae6e85d94897f807d6e7ba0946a83e720074fc95a4f6241da9f9f53
+    component_hash: 948bff879a345149b83065535bbc4a026ce9f47498a22881e432a264b9098015
     source:
       service_url: https://api.components.espressif.com/
       type: service
-    version: 8.4.0
-manifest_hash: 2b4baa7545970f98110c7d0949fdf5b454164fd6c08788dc7f361e2481b5860e
+    version: 8.3.11
+manifest_hash: 62fe875ef6af904591fc94ce7db8b07c9d450e6ea9d70235c9251d9270819128
 target: esp32s3
 version: 1.0.0

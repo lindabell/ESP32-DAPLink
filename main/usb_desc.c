@@ -58,7 +58,7 @@ static struct
     int configuration_length;
 } descriptor = {0};
 
-#ifdef CONFIG_TINYUSB_VENDOR_ENABLED
+#if(CFG_TUD_VENDOR)
 uint8_t const *tud_descriptor_bos_cb(void)
 {
     // BOS Descriptor is required for webUSB
